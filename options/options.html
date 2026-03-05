@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Index — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Index — Settings</h1>
+
+    <div class="warning">
+      ⚠️ Are.na V3 API is under active development. If something breaks, check <a href="https://www.are.na/developers/explore" target="_blank">are.na/developers</a> for changes.
+    </div>
+
+    <div class="section">
+      <div class="section-title">Are.na</div>
+      <div class="field">
+        <label>Personal Access Token</label>
+        <input type="password" id="arena-token" placeholder="••••••••••••••••" />
+        <p class="hint">Get yours at <a href="https://www.are.na/settings/personal-access-tokens" target="_blank">are.na/settings/personal-access-tokens</a></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Anthropic</div>
+      <div class="field">
+        <label>API Key</label>
+        <input type="password" id="anthropic-token" placeholder="sk-ant-••••••••••••" />
+        <p class="hint">Get yours at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>. Used only for AI tagging — claude-haiku-4-5 for cost efficiency.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Default Channel</div>
+      <div class="field">
+        <label>Save captures to</label>
+        <select id="default-channel">
+          <option value="">— load channels by clicking Fetch —</option>
+        </select>
+        <button class="btn-fetch" id="fetch-channels" type="button">Fetch channels</button>
+        <p class="hint">Pre-selects a channel in the capture popup. You can always change it per capture.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="save-row">
+      <button class="btn-save" id="save">Save</button>
+      <span class="save-status" id="status"></span>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

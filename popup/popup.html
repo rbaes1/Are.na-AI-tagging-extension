@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Index</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- No token state -->
+    <div id="no-token" class="state hidden">
+      <div class="no-token-inner">
+        <div class="logo">✦</div>
+        <p>Add your API keys in settings to get started.</p>
+        <button class="btn-primary" id="go-settings">Open Settings</button>
+      </div>
+    </div>
+
+    <!-- Main state -->
+    <div id="main" class="state hidden">
+
+      <!-- Header -->
+      <div class="header">
+        <span class="wordmark">Index</span>
+        <button class="icon-btn" id="open-settings" title="Settings">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <circle cx="7.5" cy="7.5" r="2" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M7.5 1v1.2M7.5 12.8V14M14 7.5h-1.2M2.2 7.5H1M12.3 3.2l-.85.85M3.55 10.95l-.85.85M12.3 11.8l-.85-.85M3.55 4.05l-.85-.85" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Capture mode selector (shown after channel chosen) -->
+      <div id="capture-bar" class="capture-bar hidden">
+        <button class="capture-btn" id="btn-screenshot">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <rect x="0.6" y="2.6" width="12.8" height="8.8" rx="1.2" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="7" cy="7" r="2" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          Region
+        </button>
+        <button class="capture-btn" id="btn-page">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2.5 1.5h6l3 3v8a.5.5 0 01-.5.5h-8.5a.5.5 0 01-.5-.5v-10.5a.5.5 0 01.5-.5z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M8.5 1.5v3h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Page
+        </button>
+        <div class="selected-channel-tag" id="selected-tag">
+          <span id="selected-channel-name">—</span>
+          <button class="deselect-btn" id="deselect-channel">×</button>
+        </div>
+      </div>
+
+      <!-- Channel search -->
+      <div class="search-row">
+        <svg class="search-icon" width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.5 8.5L12 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" id="channel-search" placeholder="Search channels…" autocomplete="off" spellcheck="false" />
+      </div>
+
+      <!-- Channel list -->
+      <div id="channel-list">
+        <div class="list-loading">Loading channels…</div>
+      </div>
+
+      <!-- Queue -->
+      <div id="queue-row" class="queue-row hidden">
+        <span class="queue-label">⏳ <span id="queue-count">0</span> pending</span>
+        <button class="queue-flush" id="flush-queue">Sync now</button>
+      </div>
+
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg2: #1a1a1a;
+      --border: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.9);
+      --text2: rgba(255,255,255,0.45);
+      --radius: 6px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .container { width: 100%; max-width: 420px; }
+
+    h1 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .section { margin-bottom: 32px; }
+
+    .section-title {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text2);
+      margin-bottom: 12px;
+    }
+
+    .field { margin-bottom: 12px; }
+
+    label {
+      display: block;
+      font-size: 11px;
+      color: var(--text2);
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 12px;
+      padding: 9px 12px;
+      outline: none;
+      font-family: 'SF Mono', 'Fira Mono', monospace;
+      transition: border-color 0.15s;
+    }
+
+    input:focus { border-color: rgba(255,255,255,0.25); }
+
+    .hint {
+      font-size: 11px;
+      color: var(--text2);
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    .hint a { color: rgba(255,255,255,0.6); }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    .save-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-save {
+      background: white;
+      color: black;
+      border: none;
+      border-radius: var(--radius);
+      padding: 9px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: opacity 0.15s;
+    }
+    .btn-save:hover { opacity: 0.85; }
+
+    .btn-fetch {
+      margin-top: 8px;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.6);
+      border-radius: var(--radius);
+      padding: 7px 14px;
+      font-size: 11px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.15s, color 0.15s;
+      display: block;
+    }
+    .btn-fetch:hover { border-color: rgba(255,255,255,0.3); color: white; }
+
+    select {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 12px;
+      padding: 9px 12px;
+      outline: none;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    select option { background: #1a1a1a; }
+
+    .save-status {
+      font-size: 12px;
+      color: var(--text2);
+    }
+
+    .warning {
+      background: rgba(255, 200, 0, 0.08);
+      border: 1px solid rgba(255, 200, 0, 0.2);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      font-size: 11px;
+      color: rgba(255, 200, 0, 0.7);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+  
