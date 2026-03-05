@@ -78,4 +78,4 @@ Claude returns a JSON object with a `description` (1 sentence) and `tags` (5–1
 
 ## License
 
-MIT
+This is free and unencumbered software released into the public domain. Do whatever you want with it — copy, modify, distribute, use commercially, or anything else. No attribution required. See [The Unlicense](https://unlicense.org) for details.
